@@ -1,0 +1,17 @@
+@use '../base/variables' as v;
+
+.cuadro{
+    display: flex;
+    justify-content: end;
+    .cuadro--azul{
+        padding:2rem 7rem;
+        width: 70rem;
+        background-color: v.$azul;
+        color:v.$blanco;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    
+}

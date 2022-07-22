@@ -1,0 +1,58 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+
+.proyectos{
+    margin-bottom: 4rem;
+
+    @include m.tablet {
+        @include m.grid(3,2rem);
+    }
+
+    .proyecto-tarjeta{
+        position: relative;
+        margin-top: 2rem;
+
+        @include m.tablet {
+            margin-top:0;
+        }
+
+        &:hover{
+            cursor: pointer;
+             
+            .proyecto-tarjeta__contenido{
+                
+                background-color: v.$azul;
+
+                p,
+                span{
+                    color:v.$blanco;
+                    
+                }
+
+                span{
+                    font-weight: v.$black;
+                }    
+        
+            }
+        }
+
+    }
+   
+    .proyecto-tarjeta__contenido{
+        position:absolute;
+        z-index: 1;
+        margin-top:-5rem;
+        right: 0px;
+        background-color: lighten($color: v.$grisOscuro, $amount: 75%);
+        width: 85%;
+
+        
+    }
+
+    
+
+}
+
+
+

@@ -1,0 +1,24 @@
+@use '../base/variables' as v;
+
+.seccion{
+    margin-top:5rem;
+    margin-bottom: 5rem;
+    a{
+        color: v.$azul;
+        &:hover{
+            text-decoration: underline;
+        }
+
+        h2{
+            text-align: start;
+            font-size: 2.2rem;
+            font-weight: v.$black;
+           
+        }
+
+
+    }
+
+   
+}
+

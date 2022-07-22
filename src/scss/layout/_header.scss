@@ -1,0 +1,68 @@
+@use '../base/variables' as v;
+
+.header__contenido{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 40rem;
+    h1{
+        text-align: start;
+        width: 60rem;
+        color:v.$blanco;
+        font-size: 6rem;
+        margin: 0;
+        font-weight: v.$regular;
+    }
+
+}
+
+.header__barra{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 3rem 0 0 0;
+
+    .header__navegacion{
+        display: flex;
+        justify-content: space-between;
+        
+    }
+
+
+}
+
+.header__logo{
+    font-size: 3.7rem;
+    color:v.$blanco;
+    font-weight: v.$black;
+    &:hover{
+        opacity: 0.5;
+    }
+
+}
+
+.header__navegacion{
+
+    
+    .enlace{
+        margin-right: 2rem;
+        font-size: 1.8rem;
+        color:v.$blanco;
+        font-weight: v.$bold;
+        &:hover{
+            cursor: pointer;
+            text-decoration: underline;
+        }
+    }
+
+}
+
+
+.header__buscador{
+    display:flex;
+    justify-content: flex-end;
+    
+    p{
+        display: inline;
+    }
+}
