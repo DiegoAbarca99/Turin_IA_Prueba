@@ -1,0 +1,77 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.carousel__anterior,
+.carousel__siguiente {
+	position: absolute;
+	display: block;
+	width: 30px;
+	height: 30px;
+	border: none;
+	cursor: pointer;
+	line-height: 30px;
+	text-align: center;
+	background: none;
+    color:v.$azul;
+	opacity: 80%;
+}
+
+.carousel__siguiente{
+    margin-top: -20rem;
+}
+
+.carousel__anterior{
+    margin-top: 10rem;
+}
+
+.carousel__anterior:hover,
+.carousel__siguiente:hover {
+	opacity: 100%;
+}
+
+.carousel__anterior {
+	left: -18px;
+}
+
+.carousel__siguiente {
+	right: 5px;
+}
+
+@include m.desktop {
+    .carousel__anterior {
+        left: 50px;
+        margin-top: 12rem;
+      
+    }
+    
+    .carousel__siguiente {
+        right: 50px;
+        
+    }
+}
+
+.carousel__lista {
+	overflow: hidden;
+}
+
+.carousel__elemento {
+	text-align: center;
+}
+
+.carousel__indicadores .glider-dot {
+	display: block;
+	width: 30px;
+	height: 4px;
+	background: v.$azul;
+	opacity: .2;
+	border-radius: 0;
+}
+
+.carousel__indicadores .glider-dot:hover {
+	opacity: .5;
+}
+
+.carousel__indicadores .glider-dot.active {
+	opacity: 1;
+}
+

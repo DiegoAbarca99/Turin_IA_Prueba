@@ -1,5 +1,98 @@
-.vision__contenedor{
-    display:grid;
-    grid-template-columns: 1fr 2fr;
-    column-gap: 5rem;
+@use'../base/variables' as v;
+@use'../base/mixins' as m;
+.vision{
+    background-color:v.$blancoFondo;
+    padding: 10rem;
+   
+
+
+
+    .alinear-derecha{
+        display: flex;
+        flex-direction: column;
+        align-items:flex-end;
+        justify-content:start;
+        p{
+            width: 90rem;
+        }
+
+    }
+
+ 
+
+    .vision__contenido{
+        @include m.desktop {
+            display:grid;
+            grid-template-columns: 1fr 2fr;
+            grid-template-rows: 1fr;
+            column-gap: 5rem;
+        }
+
+        display:grid;
+        grid-template-columns: 1fr;
+        
+        grid-template-rows: 1fr 1fr;
+        .blogs{
+            grid-row: 1/2;
+            grid-auto-rows: auto;
+        }
+       
+    }
+
+
 }
+
+.blogs{
+   
+
+
+    @include m.desktop {
+        grid-column: 2/3;
+    }
+   .entrada{
+    margin-bottom: 5rem;
+    &:hover{
+        .entrada__descripcion{
+            background-color: v.$azul;
+            cursor: pointer;
+        }
+    }
+    
+
+    .entrada__imagen1{
+        
+       background-image: url('/build/img/blog1.jpg');
+       height: 30rem;
+       background-position: center center;
+       background-size: cover;
+    
+    }
+
+    .entrada__imagen2{
+        
+        background-image: url('/build/img/blog2.jpg');
+        height: 30rem;
+        background-position: center center;
+        background-size: cover;
+     
+     }
+    .entrada__descripcion{
+        margin-top: -3rem;
+        padding:0.2rem 2rem;
+        width: 75rem;
+
+        h2{
+            text-align: start;
+            font-size: 2rem;
+        }
+        background-color: v.$gris;
+    }
+   }
+   
+}
+
+.sidebar{
+    grid-column: 1/2;
+    
+}
+

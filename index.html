@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.css">
     <link  rel="stylesheet" href="/build/css/app.css">
 </head>
 <body>
@@ -15,6 +16,11 @@
             <div class="contenedor header__contenido">
                 <div class="header__barra">
                     <a href="/"><span class="header__logo">Slalom</span></a>
+
+                         
+                <div class="mobile-menu">
+                    <img src="/build/img/barras.svg" alt="Logo menu desplegable">
+                </div>
         
                     <nav class="header__navegacion">
                         <a href="" class="enlace">Que hacemos</a>
@@ -24,7 +30,9 @@
         
                         <div class="header__buscador">
                             <a href="" class="btn-transparente">Vamos a hablar</a>
-                            <a href="" class="enlace"><img src="" alt=""></a>
+
+                            <i class=" fa-solid fa-magnifying-glass"></i>
+                            
                             <div class="idiomas">
                                 <p class="enlace" >Español <span>&#8681;</span></p>
                             </div>
@@ -33,17 +41,17 @@
         
                 </div>
                 
-                <h1>Construyendo mejores mañanas</h1>
+                <h1 id="titulo-principal">Construyendo mejores mañanas</h1>
         
                 
             </div>
 
-        </div>
+        </div><!--.overlay-->
 
         
         
         <video class="header__video" autoplay muted loop>
-            <source src="src/video/video1.mp4" type="video/mp4">
+            <source src="/video/video1.mp4" type="video/mp4">
         </video>    
       
 
@@ -57,72 +65,172 @@
         <a href="" class="btn-azul">Más información</a>
     </section>
 
-    <section class=" seccion nuestro-trabajo contenedor">
+    <section class=" seccion  contenedor">
         <a href=""><h2>Nuestro trabajo</h2></a>
         
-        <div class="carrusel">
-            <div class="proyectos">
-                <div class="proyecto-tarjeta">
-
-                    <p class="texto-chico">case study</p>
-
-                    <div class="proyecto-tarjeta__imagen">
-                        <picture>
-                            <source  srcset="build/img/imagen1.webp" type="image/webp">
-                            <source  srcset="build/img/imagen1.jpg" type="image/jpg">
-                            <img loading="lazy"  src="build/img/imagen1.jpg" alt="Imagen 1">
-                        </picture>
-                    </div>
-
-                    <div class="proyecto-tarjeta__contenido">
-                        <p class="texto-gris"><span class="texto-negro">Ejemplo:</span> Lorem ipsum dolor sit..
-                             
-                        </p>
-                    </div>
-
-                </div><!--.proyecto-tarjeta-->
-
-                <div class="proyecto-tarjeta">
-
-                    <p class="texto-chico">case study</p>
-
-                    <div class="proyecto-tarjeta__imagen">
-                        <picture>
-                            <source  srcset="build/img/imagen2.webp" type="image/webp">
-                            <source  srcset="build/img/imagen2.avif" type="image/avif">
-                            <img loading="lazy"  src="build/img/imagen2.jpg" alt="Imagen2">
-                        </picture>
-                    </div>
-
-                    <div class="proyecto-tarjeta__contenido">
-                        <p class="texto-gris"><span class="texto-negro">Ejemplo:</span> Lorem ipsum dolor sit.
-                             
-                        </p>
-                    </div>
-
-                </div><!--.proyecto-tarjeta-->
-
-                <div class="proyecto-tarjeta">
-
-                        <p class="texto-chico">case study</p>
-                 
-
-                    <div class="proyecto-tarjeta__imagen">
-                        <picture>
-                            <source  srcset="build/img/imagen3.webp" type="image/webp">
-                            <source  srcset="build/img/imagen3.avif" type="image/avif">
-                            <img loading="lazy"  src="build/img/imagen3.jpg" alt="Imagen2">
-                        </picture>
-                    </div>
-
-                    <div class="proyecto-tarjeta__contenido">
-                        <p class="texto-gris"><span class="texto-negro">Ejemplo:</span> Lorem ipsum dolor sit.
-                             
-                        </p>
-                    </div>
-
-
-                </div><!--.proyecto-tarjeta-->
+        <div class="carousel">
+            <div class="carousel__contenedor">
+                <button aria-label="Anterior" class="carousel__anterior">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#00abfb" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <polyline points="15 6 9 12 15 18" />
+                      </svg>
+                </button>
+    
+                <div class="carousel__lista">
+                    <div class="carousel__elemento">
+    
+                        <div class="proyecto-tarjeta">
+    
+                            <p class="texto-chico">case study</p>
+        
+                            <div class="proyecto-tarjeta__imagen">
+                                <picture>
+                                    <source  srcset="build/img/imagen1.webp" type="image/webp">
+                                    <source  srcset="build/img/imagen1.jpg" type="image/jpg">
+                                    <img loading="lazy"  src="build/img/imagen1.jpg" alt="Imagen 1">
+                                </picture>
+                            </div>
+        
+                            <div class="proyecto-tarjeta__contenido">
+                                <p class="texto-gris"><span class="texto-negro">Ejemplo:</span> Lorem ipsum dolor sit..
+                                     
+                                </p>
+                            </div>
+        
+                        </div><!--.proyecto-tarjeta-->
+    
+                    </div><!--.carousel__elemento-->
+                    <div class="carousel__elemento">
+    
+                        <div class="proyecto-tarjeta">
+    
+                            <p class="texto-chico">case study</p>
+        
+                            <div class="proyecto-tarjeta__imagen">
+                                <picture>
+                                    <source  srcset="build/img/imagen2.webp" type="image/webp">
+                                    <source  srcset="build/img/imagen2.jpg" type="image/jpg">
+                                    <img loading="lazy"  src="build/img/imagen2.jpg" alt="Imagen 1">
+                                </picture>
+                            </div>
+        
+                            <div class="proyecto-tarjeta__contenido">
+                                <p class="texto-gris"><span class="texto-negro">Ejemplo:</span> Lorem ipsum dolor sit..
+                                     
+                                </p>
+                            </div>
+        
+                        </div><!--.proyecto-tarjeta-->
+    
+                    </div><!--.carousel__elemento-->
+    
+                    <div class="carousel__elemento">
+    
+                        <div class="proyecto-tarjeta">
+    
+                            <p class="texto-chico">case study</p>
+        
+                            <div class="proyecto-tarjeta__imagen">
+                                <picture>
+                                    <source  srcset="build/img/imagen3.webp" type="image/webp">
+                                    <source  srcset="build/img/imagen3.jpg" type="image/jpg">
+                                    <img loading="lazy"  src="build/img/imagen3.jpg" alt="Imagen 1">
+                                </picture>
+                            </div>
+        
+                            <div class="proyecto-tarjeta__contenido">
+                                <p class="texto-gris"><span class="texto-negro">Ejemplo:</span> Lorem ipsum dolor sit..
+                                     
+                                </p>
+                            </div>
+        
+                        </div><!--.proyecto-tarjeta-->
+    
+                    </div><!--.carousel__elemento-->
+                    <div class="carousel__elemento">
+    
+                        <div class="proyecto-tarjeta">
+    
+                            <p class="texto-chico">case study</p>
+        
+                            <div class="proyecto-tarjeta__imagen">
+                                <picture>
+                                    <source  srcset="build/img/imagen3.webp" type="image/webp">
+                                    <source  srcset="build/img/imagen3.jpg" type="image/jpg">
+                                    <img loading="lazy"  src="build/img/imagen3.jpg" alt="Imagen 1">
+                                </picture>
+                            </div>
+        
+                            <div class="proyecto-tarjeta__contenido">
+                                <p class="texto-gris"><span class="texto-negro">Ejemplo:</span> Lorem ipsum dolor sit..
+                                     
+                                </p>
+                            </div>
+        
+                        </div><!--.proyecto-tarjeta-->
+    
+                    </div><!--.carousel__elemento-->
+                    <div class="carousel__elemento">
+    
+                        <div class="proyecto-tarjeta">
+    
+                            <p class="texto-chico">case study</p>
+        
+                            <div class="proyecto-tarjeta__imagen">
+                                <picture>
+                                    <source  srcset="build/img/imagen3.webp" type="image/webp">
+                                    <source  srcset="build/img/imagen3.jpg" type="image/jpg">
+                                    <img loading="lazy"  src="build/img/imagen3.jpg" alt="Imagen 1">
+                                </picture>
+                            </div>
+        
+                            <div class="proyecto-tarjeta__contenido">
+                                <p class="texto-gris"><span class="texto-negro">Ejemplo:</span> Lorem ipsum dolor sit..
+                                     
+                                </p>
+                            </div>
+        
+                        </div><!--.proyecto-tarjeta-->
+    
+                    </div><!--.carousel__elemento-->
+                    <div class="carousel__elemento">
+    
+                        <div class="proyecto-tarjeta">
+    
+                            <p class="texto-chico">case study</p>
+        
+                            <div class="proyecto-tarjeta__imagen">
+                                <picture>
+                                    <source  srcset="build/img/imagen3.webp" type="image/webp">
+                                    <source  srcset="build/img/imagen3.jpg" type="image/jpg">
+                                    <img loading="lazy"  src="build/img/imagen3.jpg" alt="Imagen 1">
+                                </picture>
+                            </div>
+        
+                            <div class="proyecto-tarjeta__contenido">
+                                <p class="texto-gris"><span class="texto-negro">Ejemplo:</span> Lorem ipsum dolor sit..
+                                     
+                                </p>
+                            </div>
+        
+                        </div><!--.proyecto-tarjeta-->
+    
+                    </div><!--.carousel__elemento-->
+                </div>
+    
+                <button aria-label="Siguiente" class="carousel__siguiente">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-right" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#00abfb" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <polyline points="9 6 15 12 9 18" />
+                      </svg>
+                </button>
+    
+                
+            </div>
+    
+            <div role="tablist" class="carousel__indicadores">
+    
             </div>
         </div>
 
@@ -130,34 +238,45 @@
 
     </section>
 
-    <section class="seccion plataformas contenedor">
+    <div class="plataformas">
+        <section class="seccion  plataformas__contenedor">
 
-        <a href=""><h2>Plataformas tecnologicas</h2></a>
+            <a href=""><h2>Plataformas tecnologicas</h2></a>
+            
+    
+            <div class="plataformas__logos">
+                <i class="fa-brands fa-aws"></i>
+                <i class="fa-brands fa-google"></i>
+                <i class="fa-brands fa-microsoft"></i>
+                <i class="fa-brands fa-salesforce"></i>
+                <i class="fa-brands fa-apple"></i>
+                <i class="fa-brands fa-docker"></i>
+            </div>
+    
+    
+           
+            <div class="plataformas__contenido">
+               
+        
+                <p>Tenemos asociaciones sólidas con las principales empresas tecnológicas del mundo.</p>
+    
+                <a href="" class="btn-azul">Ver todas</a>
+    
+            </div>
+    
+    
+        </section>
+
+    </div>
+    
+
+    <section class="seccion quienes-somos">
+      
+         <video class="quienes-somos__video" autoplay muted loop>
+            <source src="/video/video2.mp4" type="video/mp4">
+        </video> 
         
 
-        <div class="plataformas__logos">
-            <img src="" alt="" class="logo">
-            <img src="" alt="" class="logo">
-            <img src="" alt="" class="logo">
-            <img src="" alt="" class="logo">
-            <img src="" alt="" class="logo">
-            <img src="" alt="" class="logo">
-        </div>
-
-       
-        <div class="plataformas__contenido">
-           
-    
-            <p>Tenemos asociaciones sólidas con las principales empresas tecnológicas del mundo.</p>
-
-            <a href="" class="btn-azul">Ver todas</a>
-
-        </div>
-
-
-    </section>
-
-    <section class="seccion contenedor">
         <a href=""><h2>Quienes somos</h2></a>
         <p class="resaltar-texto">
             Somos asesores, estrategas e ingenieros enfocados en las personas por encima de todo.
@@ -170,58 +289,88 @@
 
         <a href="" class="btn-azul">Conocenos</a>
 
+        <picture class="imagen1">
+            <source  srcset="build/img/quienes-somos1.webp" type="image/webp">
+            <source  srcset="build/img/quienes-somos1.avif" type="image/avif">
+            <img loading="lazy"  src="build/img/quienes-somos1.jpg" alt="Quienes-somos1">
+        </picture>
+
+        
+        <picture class="imagen2">
+            <source  srcset="build/img/quienes-somos2.webp" type="image/webp">
+            <source  srcset="build/img/quienes-somos2.avif" type="image/avif">
+            <img loading="lazy"  src="build/img/quienes-somos2.jpg" alt="Quienes-somos2">
+        </picture>
+        
+       
+
     </section>
 
-    <section class="seccion vision contenedor">
-        <a href=""><h2>Que estamos pensando</h2></a>
-
-        <p class="resaltar-texto">
-            Nuestras últimas noticias, documentos técnicos, videos y artículos de la compañía.
-        </p>
-
-        <div class="vision__contenedor">
-            <aside class="sidebar">
-                <article class="entrada">
-                    <p class="texto-chico">news</p>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum maxime inventore officia voluptas, non, voluptatem aperiam</p>
-                </article>
-                <article class="entrada">
-                    <p class="texto-chico">news</p>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum maxime inventore officia voluptas, non, voluptatem aperiam</p>
-                </article>
-                <article class="entrada">
-                    <p class="texto-chico">news</p>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum maxime inventore officia voluptas, non, voluptatem aperiam</p>
-                </article>
-                <article class="entrada">
-                    <p class="texto-chico">news</p>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum maxime inventore officia voluptas, non, voluptatem aperiam</p>
-                </article>
-            </aside><!--.sidebar-->
-
-            <div class="blogs">
-                <article>
-                    <p class="texto-chico">solution</p>
-                    <div class="blogs__imagen">
-                        <img src="" alt="Imagen blog">
-                        <div class="blogs__description">
-                            <h2>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</h2>
-                        </div>
-                    </div>
-                </article>
-                <article>
-                    <p class="texto-chico">solution</p>
-                    <div class="blogs__imagen">
-                        <img src="" alt="Imagen blog">
-                        <div class="blogs__description">
-                            <h2>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</h2>
-                        </div>
-                    </div>
-                </article>
+    <div class="vision">
+        <section class="seccion  vision__contenedor">
+            <div class="alinear-derecha contenedor">
+                    
+                <a href=""><h2>Que estamos pensando</h2></a>
+               
+                <p class="resaltar-texto">
+                Nuestras últimas noticias, documentos técnicos, videos y artículos de la compañía.
+               </p>
+    
             </div>
-        </div>
+            
+            <div class="vision__contenido contenedor">
+                <aside class="sidebar">
+                    <article class="entrada">
+                        <p class="texto-chico">news</p>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum maxime inventore officia voluptas, non, voluptatem aperiam</p>
+                    </article>
+                    <article class="entrada">
+                        <p class="texto-chico">news</p>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum maxime inventore officia voluptas, non, voluptatem aperiam</p>
+                    </article>
+                    <article class="entrada">
+                        <p class="texto-chico">news</p>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum maxime inventore officia voluptas, non, voluptatem aperiam</p>
+                    </article>
+                    <article class="entrada">
+                        <p class="texto-chico">news</p>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum maxime inventore officia voluptas, non, voluptatem aperiam</p>
+                    </article>
+                </aside><!--.sidebar-->
+    
+                <div class="blogs">
 
-    </section>
+
+                    <article class="entrada">
+                        <p class="texto-chico">solution</p>
+
+                        <div class="entrada__imagen1"> </div>
+            
+                        <div class="entrada__descripcion">
+                            <h2>AI for all.</h2>
+                        </div>
+
+                    </article>
+
+                    <article class="entrada">
+                        <p class="texto-chico">solution</p>
+
+                        <div class="entrada__imagen2"> </div>
+            
+                        <div class="entrada__descripcion">
+                            <h2>AI for all.</h2>
+                        </div>
+
+                    </article>
+
+
+                   
+                </div><!--.blogs-->
+            </div><!--.vision-contenido-->
+    
+        </section>
+    </div>
+    
 
     <div class="cuadro">
         <div class="cuadro--azul">
@@ -234,11 +383,13 @@
     
     </div>
    
-
-    <div class="cuadro-transparente">
-        <p class="resaltar-texto"> Tu futuro comienza hoy. Cierto? </p>
-        <a href="" class="btn-azul">Vamos a hablar</a>
+    <div class="contenedor">
+        <div class="cuadro--transparente">
+            <p class="resaltar-texto"> Tu futuro comienza hoy. Cierto? </p>
+            <a href="" class="btn-azul">Vamos a hablar</a>
+        </div>
     </div>
+    
 
     <footer class="footer ">
         <div class="contenedor">
@@ -266,9 +417,8 @@
         
     </footer>
 
-
-    <script src="build/js/bundle.js">
-        
-    </script>
+    <script src="https://kit.fontawesome.com/0ff06cd895.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.js" crossorigin="anonymous"> </script>
+    <script src="build/js/bundle.js"></script>
 </body>
 </html>

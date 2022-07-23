@@ -1,8 +1,19 @@
 @use '../base/variables' as v;
+@use '../base/mixins' as m;
+
 
 .que-hacemos{
-    width: min(90rem,90%);
+    width: 50%;
     margin: 0 auto;
+    margin-top: -50rem;
+    
+    @include m.tablet {
+        margin-top: 0;
+    }
+    @include m.desktop {
+        width: 90%;
+        margin-top: 0;
+    }
     a{
         color: v.$azul;
         &:hover{
@@ -21,9 +32,12 @@
 
     .resaltar-texto{
         margin-top: 0;
-        font-size: 4rem;
+        font-size: 2rem;
         font-weight: v.$bold;
         color: v.$black;
+        @include m.desktop {
+            font-size:4rem;
+        }
     }
 
    

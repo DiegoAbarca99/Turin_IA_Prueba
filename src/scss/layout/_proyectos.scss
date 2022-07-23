@@ -2,14 +2,10 @@
 @use '../base/mixins' as m;
 
 
-.proyectos{
-    margin-bottom: 4rem;
 
-    @include m.tablet {
-        @include m.grid(3,2rem);
-    }
 
-    .proyecto-tarjeta{
+    
+.proyecto-tarjeta{
         position: relative;
         margin-top: 2rem;
 
@@ -39,7 +35,7 @@
 
     }
    
-    .proyecto-tarjeta__contenido{
+.proyecto-tarjeta__contenido{
         position:absolute;
         z-index: 1;
         margin-top:-5rem;
@@ -48,11 +44,11 @@
         width: 85%;
 
         
-    }
+}
 
     
 
-}
+
 
 
 

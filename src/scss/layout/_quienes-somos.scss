@@ -1,0 +1,54 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.quienes-somos{
+    
+    position: relative;
+    width: min(62rem,70%);
+    margin: 3rem auto 10rem auto;
+
+
+    .quienes-somos__video{
+        position: absolute;
+        left:450px;
+       margin-top: -2rem;
+        width: 30rem;
+        border-radius: 0% 0% 0% 80%;
+        @include m.plus2 {
+            left:-450px;
+            margin-top: -5rem;
+        }
+    }
+
+    .imagen1{
+        position: absolute;
+        left: -450px;
+        margin-top: -20rem;
+        width: 30rem;
+        height: 40rem;
+        display:none;
+        @include m.plus2 {
+            display: block;
+            
+        }
+    }
+
+    .imagen2{
+        position: absolute;
+        width: 43rem;
+        margin-top: -40rem;
+        display: none;
+        @include m.plus2 {
+            display: block;
+            left: 66rem;
+        }
+    }
+
+    a{
+        display: inline-block;
+        margin-top: 6rem ;
+    }
+   
+
+}
+

@@ -1,17 +1,60 @@
 @use '../base/variables' as v;
+@use '../base/mixins' as m;
 
 .cuadro{
     display: flex;
     justify-content: end;
+    margin-bottom: 10rem;
     .cuadro--azul{
-        padding:2rem 7rem;
-        width: 70rem;
+        margin-top: -8rem;
+        padding:1rem 15rem 1rem 5rem;
+        width: 90rem;
         background-color: v.$azul;
         color:v.$blanco;
         display: flex;
+        flex-direction: column;
         justify-content: space-between;
         align-items: center;
+        @include m.desktop {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+        h3{
+            text-align: start;
+            font-weight: v.$black;
+            font-size: 1.5rem;
+        }
+        p{
+            color:v.$blanco;
+            width: 40rem;
+        }
+
+        a{
+            color:v.$blanco;
+            font-weight: v.$black;
+            text-decoration: underline;
+        }
     }
 
+   
+}
+
+
+.cuadro--transparente{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    @include m.tablet {
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+    p{
+        margin-top: 5rem;
+    }
     
 }

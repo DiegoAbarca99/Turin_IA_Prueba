@@ -17,6 +17,16 @@
         @content;
     }
 }
+@mixin plus {
+    @media (min-width:930px) {
+        @content;
+    }
+}
+@mixin plus2 {
+    @media (min-width:1000px) {
+        @content;
+    }
+}
 
 
 
